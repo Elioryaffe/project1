@@ -20,9 +20,4 @@ import org.springframework.web.bind.annotation.RestController;
         public ResponseEntity<?> bye(){
             return new ResponseEntity<>("bye World!", HttpStatus.OK);
         }
-
-        @RequestMapping(value = "/sex", method = RequestMethod.GET)
-        public ResponseEntity<?> sex(){
-            return new ResponseEntity<>("אתה רוצה זין", HttpStatus.OK);
-        }
 }
