@@ -1,6 +1,6 @@
 package com.example.Project1.controller;
 
-import com.example.Project1.objects.Student;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,10 +23,10 @@ import static java.lang.Character.getName;
         public ResponseEntity<?> bye(){
             return new ResponseEntity<>("bye World!", HttpStatus.OK);
         }
-        Student student = new Student();
-        @RequestMapping(value = "/Student/name", method = RequestMethod.GET)
+
+        @RequestMapping(value = "/name", method = RequestMethod.GET)
         public ResponseEntity<?> name(){
-            return new ResponseEntity<>("name=" + student.getName(), HttpStatus.OK);
+            return new ResponseEntity<>("name=", HttpStatus.OK);
         }
 
 }
