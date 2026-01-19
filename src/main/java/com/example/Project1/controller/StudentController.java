@@ -26,6 +26,11 @@ public class StudentController {
         return new ResponseEntity<>(studentService.findById(id), HttpStatus.OK);
     }
 
+    @GetMapping("/name/{fullName}")
+    public ResponseEntity<?> getOneStudentByName(@PathVariable String fullName) {
+        return new ResponseEntity<>(studentService.findByFullName(fullName), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<?> insertStudent(@RequestBody StudentIn studentIn) {
         Student student = studentIn.toStudent(studentIn);

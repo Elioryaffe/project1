@@ -2,8 +2,6 @@ package com.example.Project1.dto;
 
 
 import com.example.Project1.model.Student;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Max;
@@ -11,8 +9,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
-@Getter
-@Setter
+
 public class StudentIn implements Serializable {
     @NotBlank
     @Length(min = 5, max = 30)
@@ -27,6 +24,37 @@ public class StudentIn implements Serializable {
     @NotBlank @Length(min = 10, max = 10)
     private String phone;
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Integer getPsycoScore() {
+        return psycoScore;
+    }
+
+    public void setPsycoScore(Integer psycoScore) {
+        this.psycoScore = psycoScore;
+    }
+
+    public Double getGraduationScore() {
+        return graduationScore;
+    }
+
+    public void setGraduationScore(Double graduationScore) {
+        this.graduationScore = graduationScore;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public Student toStudent(StudentIn studentIn) {
         return new Student(

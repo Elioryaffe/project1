@@ -1,5 +1,12 @@
 version: "3"
 services:
+  appserver:
+    container_name: server
+    image: elioryaffe/project:eliory-001
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
   db:
     image: postgres
     environment:
@@ -7,5 +14,5 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./postgresdata:/var/lib/postgresql
+      - ./postgresdata:/var/lib/postgresql/
     privileged: true

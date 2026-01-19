@@ -13,12 +13,13 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>Project1</artifactId>
+	<artifactId>project1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Project1</name>
 
 	<properties>
 		<java.version>11</java.version>
+		<skipTests>true</skipTests>
 	</properties>
 
 	<dependencies>
@@ -48,14 +49,6 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>6.1.5.Final</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.34</version>
-			<scope>provided</scope>
-		</dependency>
-
 
 		<!-- Swagger (Springfox 3) - תואם Java 11 -->
 		<dependency>

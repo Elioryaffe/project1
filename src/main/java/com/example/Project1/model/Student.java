@@ -1,8 +1,5 @@
 package com.example.Project1.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -13,9 +10,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name="student")
-@Getter
-@Setter
-@AllArgsConstructor
+
 public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -40,6 +35,46 @@ public class Student implements Serializable {
 
     @Length(max = 500)
     private String profilePicture;
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Integer getPsycoScore() {
+        return psycoScore;
+    }
+
+    public void setPsycoScore(Integer psycoScore) {
+        this.psycoScore = psycoScore;
+    }
+
+    public Double getGraduationScore() {
+        return graduationScore;
+    }
+
+    public void setGraduationScore(Double graduationScore) {
+        this.graduationScore = graduationScore;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
+    }
 
     public Student(){}
 
